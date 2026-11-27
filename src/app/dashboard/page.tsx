@@ -5,6 +5,11 @@ import {
   Sunrise,
 } from "lucide-react";
 
+import TaskAnalytics from "../components/dashboard/task-analytics";
+import TodayTasks from "../components/dashboard/today-task";
+import UpcomingDeadlines from "../components/dashboard/upcoming-deadlines";
+import RecentProjects from "../components/dashboard/recent-projects";
+
 export default function DashboardPage() {
   return (
     <div className="p-8">
@@ -63,6 +68,27 @@ export default function DashboardPage() {
           </p>
         </div>
       </div>
+
+      <div className="mt-8 rounded-2xl bg-(--surface) p-6">
+          
+
+        <TaskAnalytics />
+      </div>
+
+      <div className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-3">
+        <div className="xl:col-span-2">
+          <TodayTasks />
+        </div>
+
+        <div className="xl:col-span-1">
+          <UpcomingDeadlines />
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <RecentProjects />
+      </div>
     </div>
   );
 }
+    

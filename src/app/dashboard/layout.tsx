@@ -1,4 +1,3 @@
-
 import Sidebar from "../components/layout/sidebar";
 import Topbar from "../components/layout/topbar";
 
@@ -12,8 +11,10 @@ export default function DashboardLayout({
       <Sidebar />
 
       <main className="min-w-0 flex-1">
-        <Topbar />
-        {children}
+        <div className="mx-auto w-full max-w-7xl">
+          <Topbar />
+          {children}
+        </div>
       </main>
     </div>
   );
